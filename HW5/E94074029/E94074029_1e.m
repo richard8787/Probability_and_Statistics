@@ -1,0 +1,38 @@
+%1.(e)
+clc;
+clear;
+x1=1:10000;
+y1=binopdf(x1,10000,0.01);
+y2=poisspdf(x1,10000*0.01);
+figure('Name','1.(e)','NumberTitle','off');
+subplot(4,1,1);
+plot(x1,y1,x1,y2);
+xlabel('values of random variable x');
+ylabel('probability');
+legend('b(x,10^4,0.01)','p(x,10^4*0.01)');
+title('binomial distribution and poisson distribution in (n,p)=(10^4,0.01)');
+y3=binopdf(x1,10000,0.1);
+y4=poisspdf(x1,10000*0.1);
+subplot(4,1,2);
+plot(x1,y3,x1,y4);
+xlabel('values of random variable x');
+ylabel('probability');
+legend('b(x,10^4,0.1)','p(x,10^4*0.1)');
+title('binomial distribution and poisson distribution in (n,p)=(10^4,0.1)');
+y5=binopdf(x1,10000,0.2);
+y6=poisspdf(x1,10000*0.2);
+subplot(4,1,3);
+plot(x1,y5,x1,y6);
+xlabel('values of random variable x');
+ylabel('probability');
+legend('b(x,10^4,0.2)','p(x,10^4*0.2)');
+title('binomial distribution and poisson distribution in (n,p)=(10^4,0.2)');
+y7=binopdf(x1,10000,0.5);
+y8=poisspdf(x1,10000*0.5);
+subplot(4,1,4);
+plot(x1,y7,x1,y8);
+xlabel('values of random variable x');
+ylabel('probability');
+legend('b(x,10^4,0.5)','p(x,10^4*0.5)');
+title('binomial distribution and poisson distribution in (n,p)=(10^4,0.5)');
+%1.(e) end
